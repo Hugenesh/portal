@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive Portal | Rostova</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 sm:p-10">
+    <canvas id="snowCanvas"></canvas>
+
+    <div class="max-w-5xl mx-auto content-wrapper">
+        <div class="panel mb-6 p-6 flex flex-col md:flex-row justify-between items-center border-l-4 border-l-red-600">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <h1 class="text-white text-3xl font-black tracking-tighter red-glow uppercase">Rostova Organization</h1>
+                <p class="text-[10px] text-zinc-500 mt-1 uppercase tracking-widest">data access | Status: <span class="text-red-500 animate-pulse font-bold">active</span></p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <span class="text-[15px] text-zinc-400 uppercase font-bold">Support & Access:</span>
+                <a href="https://t.me/RostovaSupp" class="text-red-500 hover:text-white transition font-bold">@RostovaSupp</a>
+            </div>
+        </div>
+
+        <div class="mb-6 relative z-10">
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="SEARCH ARCHIVE..."
+                   class="w-full bg-zinc-900/80 border border-zinc-800 p-4 text-zinc-200 focus:outline-none focus:border-red-600 transition text-sm">
+        </div>
+
+        <div class="panel overflow-hidden">
+            <table class="w-full text-left border-collapse" id="dataTable">
+                <thead class="bg-black/50 text-zinc-500 text-[10px] uppercase tracking-widest border-b border-zinc-800">
+                    <tr>
+                        <th class="p-4">name</th>
+                        <th class="p-4 hidden sm:table-cell">Status</th>
+                        <th class="p-4 hidden sm:table-cell">Metadata</th>
+                        <th class="p-4 text-right">Access Link</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-800/50">
+                    <tr class="hover:bg-red-900/10 transition-all">
+                        <td class="p-4">
+                            <span class="text-zinc-200 font-bold">Usha International</span>
+                            <p class="text-[10px] text-zinc-400 uppercase">Release in :2026-03-11</p>
+                        </td>
+                        <td class="p-4 hidden sm:table-cell text-xs font-mono text-zinc-400">
+                            PENDING
+                        </td>
+                        <td class="p-4 hidden sm:table-cell text-xs font-mono text-zinc-500">
+                            90.00 TB
+                        </td>
+                        <td class="p-4 text-right">
+                            <a href="https://t.me/RostovaSupp" target="_blank" 
+                               class="inline-block bg-red-600/10 text-red-500 border border-red-600/40 px-5 py-2 text-xs font-black hover:bg-red-600 hover:text-white transition-all uppercase rounded-sm">
+                                Download
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-8 text-center border-t border-zinc-900 pt-6">
+            <p class="text-[9px] text-zinc-500 uppercase tracking-[0.3em]">Powered by Rostova | © 2026</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
